@@ -10,7 +10,10 @@ exports.setUser = (id, pass, cb) => {
 exports.getUser = (id, cb) => {
   client.get('user:'+id, (err, reply) => {
     if (err) return cb(err, null);
-    else if(reply) return cb(null, reply.toString());
+    else if(reply) return cb(null, {
+				username:id,
+				password:reply.toString()
+			});
     else return cb(null, null);
   });
 }
