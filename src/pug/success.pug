@@ -1,4 +1,8 @@
 doctype html
 html(lang="en")
   body
-    H1 Login Successfully!!
+    if (!user)
+      H1 Please login!!
+    if (user)
+      H1 Login Successfully with #{user.username}!!
+      a(href='/logout') logout

@@ -13,6 +13,8 @@
     "mocha": "^3.0.0",
     "body-parser": "^1.17.1",
     "passport": "",
-    "passport-local":""
+    "passport-local":"",
+    "express-session": "^1.15.1",
+    "path": ""
   }
 }
